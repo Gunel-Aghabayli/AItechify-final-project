@@ -1,0 +1,27 @@
+@use "../variables" as *;
+
+.card-container {
+  padding-bottom: 80px;
+  .card {
+    position: absolute;
+    height: 500px;
+    border-radius: 20px;
+    left: 40%;
+    opacity: 0;
+    overflow: hidden;
+    .centerImg {
+      width: 380px;
+      height: 500px;
+      border: 6px solid rgba(255, 255, 255, 0.1215686275);
+      border-radius: 20px;
+    }
+    .sideImg {
+      width: 380px;
+      height: 510px;
+      border-radius: 20px;
+      border: 6px solid rgba(255, 255, 255, 0.1215686275);
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+}

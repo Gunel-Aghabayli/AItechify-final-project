@@ -1,0 +1,54 @@
+@use "../variables" as *;
+
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  .row {
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 20px;
+    .navBar {
+      background-color: $pureWhite;
+      border-radius: 100px;
+      padding: 15px;
+      box-shadow: rgba(240, 46, 170, 0.4) 0px 3px,
+        rgba(240, 46, 170, 0.3) 0px 7px, rgba(240, 46, 170, 0.2) 0px 9px;
+      .navList {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        li {
+          a {
+            font-size: 16px;
+            color: $textColor;
+            &:hover {
+              background: linear-gradient(90deg, #a855f7, #ec4899);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+      }
+    }
+    .icons {
+      display: flex;
+      gap: 25px;
+      a {
+        color: $pureWhite;
+        font-size: 22px;
+        transition: color 0.4s ease, transform 0.3s ease;
+        &:hover {
+          color: $iconBlue;
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+}
