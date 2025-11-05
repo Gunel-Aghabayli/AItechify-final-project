@@ -4,6 +4,7 @@ import HeroComponent from "./HeroComponent";
 import { MdArrowOutward } from "react-icons/md";
 import HeroCards from "./HeroCards";
 import HomeAb from "./HomeAb";
+import Logos from "./Logos";
 
 const Hero = () => {
   return (
@@ -43,6 +44,9 @@ const Hero = () => {
       </section>
       <div>
         <HomeAb />
+      </div>
+      <div>
+        <Logos />
       </div>
     </div>
   );

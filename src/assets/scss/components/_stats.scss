@@ -1,0 +1,90 @@
+@use "../variables" as *;
+
+.stats-section {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  padding: 90px 80px;
+  color: #ffffff;
+  gap: 30px;
+
+  .stat-box {
+    width: 30%;
+    position: relative;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: default;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom:90px;
+      left: 40%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .stat-number {
+      font-size: 92px;
+      font-weight: 800;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      letter-spacing: -1px;
+      line-height: 1;
+      
+      .suffix {
+        font-size: 56px;
+        color: $textPurple;
+        font-weight: 500;
+        margin-left: 6px;
+      }
+    }
+    p {
+      margin-top: 18px;
+      font-size: 18px;
+      opacity: 0.85;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .stats-section {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+
+    .stat-box {
+      width: 45%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-section {
+    gap: 36px;
+
+    .stat-box {
+      width: 100%;
+    }
+
+    .stat-number {
+      font-size: 56px !important;
+      .suffix {
+        font-size: 42px !important;
+      }
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import img from "../assets/images/ab2.webp";
 import videoFile from "../assets/videos/01.mp4";
 import { MdArrowOutward } from "react-icons/md";
+import Stats from "./Stats";
 
 const HomeAb = () => {
   return (
@@ -63,6 +64,9 @@ const HomeAb = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="second-part">
+        <Stats/>
       </div>
     </section>
   );
