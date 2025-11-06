@@ -79,8 +79,8 @@
   &:hover span {
     opacity: 1;
     transform: translate(-15%, 0);
-
   }
+  
 
   @for $i from 1 through 20 {
     &:hover span:nth-child(#{$i}) {

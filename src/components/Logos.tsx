@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
+
 const logos = [
   { src: "/src/assets/images/sp1.svg", alt: "AMD" },
   { src: "/src/assets/images/sp2.svg", alt: "Nichia" },
@@ -25,10 +26,10 @@ const Logos = () => {
 
       <Swiper
         modules={[Autoplay]}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop={true}
         slidesPerView={6}
-        spaceBetween={80}
+        spaceBetween={50}
         className="logos-container"
       >
         {logos.map((logo, i) => (
