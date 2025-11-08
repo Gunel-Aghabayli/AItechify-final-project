@@ -11,8 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* White background reveal */
   .white-reveal {
     position: absolute;
     background: #fff;
@@ -25,8 +23,6 @@
   &.active .white-reveal {
     clip-path: inset(0 0 0 0);
   }
-
-  /* Content fade-up */
   .team-content {
     position: relative;
     z-index: 3;
@@ -35,7 +31,7 @@
     opacity: 0;
     transform: translateY(60px);
     transition: 0.9s ease-out;
-      .subtitle {
+    .subtitle {
       font-size: 16px;
       font-weight: 600;
       display: inline-flex;
@@ -61,12 +57,10 @@
   }
 
   h2 {
-    font-size: 38px;
+    font-size: 51px;
     font-weight: 700;
     margin-bottom: 40px;
   }
-
-  /* Grid */
   .team-grid {
     display: flex;
     width: 100%;
@@ -80,7 +74,7 @@
     opacity: 0;
     transform: translateY(80px);
     transition: 0.9s ease-out;
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   &.active .member {
@@ -88,12 +82,22 @@
     transform: translateY(0);
   }
 
-
-  .member:nth-child(1) { transition-delay: 0.3s; --clr: #efb48b; }
-  .member:nth-child(2) { transition-delay: 0.5s; --clr: #ee8ab7; }
-  .member:nth-child(3) { transition-delay: 0.7s; --clr: #7fe3f0; }
-  .member:nth-child(4) { transition-delay: 0.9s; --clr: #c497ff; }
-
+  .member:nth-child(1) {
+    transition-delay: 0.3s;
+    --clr: #efb48b;
+  }
+  .member:nth-child(2) {
+    transition-delay: 0.5s;
+    --clr: #ee8ab7;
+  }
+  .member:nth-child(3) {
+    transition-delay: 0.7s;
+    --clr: #7fe3f0;
+  }
+  .member:nth-child(4) {
+    transition-delay: 0.9s;
+    --clr: #c497ff;
+  }
 
   .photo {
     width: 100%;

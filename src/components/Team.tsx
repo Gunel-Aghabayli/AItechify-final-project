@@ -4,7 +4,6 @@ import img2 from "../assets/images/tm2.webp";
 import img3 from "../assets/images/tm3.webp";
 import img4 from "../assets/images/tm4.webp";
 
-
 const teamData = [
   {
     img: img1,
@@ -34,36 +33,33 @@ const teamData = [
 
 const Team = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const el = sectionRef.current;
+        if (!el) return;
 
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const el = sectionRef.current;
-      if (!el) return;
-
-      if (entries[0].isIntersecting) {
-        el.classList.add("active");
-      } else {
-        el.classList.remove("active");
-      }
-    },
-    { threshold: 0.3 }
-  );
-
-  if (sectionRef.current) observer.observe(sectionRef.current);
-  return () => observer.disconnect();
-}, []);
-
+        if (entries[0].isIntersecting) {
+          el.classList.add("active");
+        } else {
+          el.classList.remove("active");
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
   return (
     <section ref={sectionRef} className="team">
       <div className="white-reveal"></div>
       <div className="team-content">
         <h4 className="subtitle">Team Member</h4>
-        <h2>Meet Our Professional Team Members</h2>
+        <h2>Meet Our Processional Team Members</h2>
         <div className="team-grid">
           {teamData.map((m, index) => (
             <div className="member" key={index}>
-              <div className="photo" >
+              <div className="photo">
                 <img src={m.img} alt={m.name} />
               </div>
 
